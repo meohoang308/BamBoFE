@@ -9,10 +9,7 @@ import { Link } from "react-router-dom";
 import moment from 'moment';
 class _People extends Component {
   constructor(props) {
-    super(props);
-    // this.state = {
-    //   loading: false,
-    // }
+    super(props);  
   }
 
   static getStores() {
@@ -38,9 +35,6 @@ class _People extends Component {
 
   render() {
     const loading = typeof this.state.listPeople.results === 'undefined'? true: false;
-    // this.setState({
-    //   loading: typeof this.state.listPeople.results === 'undefined'? true: false
-    // })
     const listPeople = typeof this.state.listPeople.results !== 'undefined' ? this.state.listPeople.results.map((ele, index) => ({
       key: index, gender: ele.gender,
       name:
